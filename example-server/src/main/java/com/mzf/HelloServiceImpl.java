@@ -1,0 +1,25 @@
+package com.mzf;
+
+import com.mzf.annotation.RpcService;
+import lombok.extern.slf4j.Slf4j;
+
+/**
+ * 服务提供端
+ *
+ * @author 好大雨
+ * @create 2021/9/24 21:15
+ */
+@Slf4j
+@RpcService(group = "test1", version = "version1")
+public class HelloServiceImpl implements HelloService{
+    static {
+        System.out.println("HelloServiceImpl被创建");
+    }
+    @Override
+    public String hello(Hello hello) {
+        log.info("HelloServiceImpl收到: {}.", hello.getMessage());
+        String result = "Hello description is " + hello.getDescription();
+        log.info("HelloServiceImpl返回: {}.", result);
+        return result;
+    }
+}

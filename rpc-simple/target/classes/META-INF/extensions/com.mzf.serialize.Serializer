@@ -1,0 +1,2 @@
+kyro=com.mzf.serialize.kyro.KryoSerializer
+protostuff=com.mzf.serialize.protostuff.ProtostuffSerializer

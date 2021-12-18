@@ -1,0 +1,2 @@
+netty=com.mzf.remoting.transport.netty.client.NettyRpcClient
+socket=com.mzf.remoting.transport.socket.SocketRpcClient
